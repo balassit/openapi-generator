@@ -9,6 +9,7 @@ $properties = @(
     'targetFramework=net48',
     'validatable=true',
     'nullableReferenceTypes=false',
+    'nullableCollectionTypes=false',
     'hideGenerationTimestamp=true',
     'packageVersion=1.0.0',
     'packageAuthors=OpenAPI',
@@ -151,6 +152,7 @@ Endpoints do not require authorization.
 - netCoreProjectFile: false
 - nonPublicApi: false
 - nullableReferenceTypes: false
+- nullableCollectionTypes: false
 - optionalAssemblyInfo: 
 - optionalEmitDefaultValues: false
 - optionalMethodArgument: true

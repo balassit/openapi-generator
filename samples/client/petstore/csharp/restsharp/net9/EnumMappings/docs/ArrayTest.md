@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**NullableArrayOfString** | **List&lt;string&gt;** |  | [optional] 
 **ArrayOfString** | **List&lt;string&gt;** |  | [optional] 
 **ArrayArrayOfInteger** | **List&lt;List&lt;long&gt;&gt;** |  | [optional] 
 **ArrayArrayOfModel** | **List&lt;List&lt;ReadOnlyFirst&gt;&gt;** |  | [optional] 

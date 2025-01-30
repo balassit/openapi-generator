@@ -9,6 +9,7 @@ $properties = @(
     'targetFramework=net48',
     'validatable=true',
     'nullableReferenceTypes=false',
+    'nullableCollectionTypes=false',
     'hideGenerationTimestamp=true',
     'packageVersion=1.0.0',
     'packageAuthors=OpenAPI',
@@ -197,6 +198,7 @@ Authentication schemes defined for the API:
 - netCoreProjectFile: false
 - nonPublicApi: false
 - nullableReferenceTypes: false
+- nullableCollectionTypes: false
 - optionalAssemblyInfo: 
 - optionalEmitDefaultValues: false
 - optionalMethodArgument: true

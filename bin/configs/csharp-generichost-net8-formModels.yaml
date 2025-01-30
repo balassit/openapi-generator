@@ -9,6 +9,7 @@ additionalProperties:
   useCompareNetObjects: true 
   disallowAdditionalPropertiesIfNotPresent: false
   nullableReferenceTypes: false
+  nullableCollectionTypes: false
   equatable: true
   targetFramework: net8.0
   skipFormModel: false

@@ -213,6 +213,10 @@ public class AspNetServerCodegen extends AbstractCSharpCodegen {
                 CodegenConstants.NULLABLE_REFERENCE_TYPES_DESC,
                 this.nullReferenceTypesFlag);
 
+        addSwitch(CodegenConstants.NULLABLE_COLLECTION_TYPES,
+                CodegenConstants.NULLABLE_COLLECTION_TYPES_DESC,
+                this.nullCollectionTypesFlag);
+
         addSwitch(CodegenConstants.SORT_PARAMS_BY_REQUIRED_FLAG,
                 CodegenConstants.SORT_PARAMS_BY_REQUIRED_FLAG_DESC,
                 sortParamsByRequiredFlag);
@@ -339,7 +343,9 @@ public class AspNetServerCodegen extends AbstractCSharpCodegen {
     public void postProcessParameter(CodegenParameter parameter) {
         super.postProcessParameter(parameter);
 
-        if (!parameter.dataType.endsWith("?") && !parameter.required && (nullReferenceTypesFlag || this.getNullableTypes().contains(parameter.dataType))) {
+        if (!parameter.dataType.endsWith("?") 
+            && !parameter.required 
+            && (getNullableTypes().contains(parameter.dataType) || (nullReferenceTypesFlag && (nullCollectionTypesFlag || (!parameter.isArray && !parameter.isMap))))) {
             parameter.dataType = parameter.dataType + "?";
         }
     }

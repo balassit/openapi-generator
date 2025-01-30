@@ -57,7 +57,7 @@ namespace Org.OpenAPITools.Models
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
-        public List<Tag> Tags { get; set; }
+        public List<Tag>? Tags { get; set; }
 
 
         /// <summary>

@@ -35,16 +35,24 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ArrayTest" /> class.
         /// </summary>
+        /// <param name="nullableArrayOfString">nullableArrayOfString.</param>
         /// <param name="arrayOfString">arrayOfString.</param>
         /// <param name="arrayArrayOfInteger">arrayArrayOfInteger.</param>
         /// <param name="arrayArrayOfModel">arrayArrayOfModel.</param>
-        public ArrayTest(List<string> arrayOfString = default(List<string>), List<List<long>> arrayArrayOfInteger = default(List<List<long>>), List<List<ReadOnlyFirst>> arrayArrayOfModel = default(List<List<ReadOnlyFirst>>))
+        public ArrayTest(List<string> nullableArrayOfString = default(List<string>), List<string> arrayOfString = default(List<string>), List<List<long>> arrayArrayOfInteger = default(List<List<long>>), List<List<ReadOnlyFirst>> arrayArrayOfModel = default(List<List<ReadOnlyFirst>>))
         {
+            this.NullableArrayOfString = nullableArrayOfString;
             this.ArrayOfString = arrayOfString;
             this.ArrayArrayOfInteger = arrayArrayOfInteger;
             this.ArrayArrayOfModel = arrayArrayOfModel;
             this.AdditionalProperties = new Dictionary<string, object>();
         }
+
+        /// <summary>
+        /// Gets or Sets NullableArrayOfString
+        /// </summary>
+        [DataMember(Name = "nullable_array_of_string", EmitDefaultValue = true)]
+        public List<string> NullableArrayOfString { get; set; }
 
         /// <summary>
         /// Gets or Sets ArrayOfString
@@ -78,6 +86,7 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ArrayTest {\n");
+            sb.Append("  NullableArrayOfString: ").Append(NullableArrayOfString).Append("\n");
             sb.Append("  ArrayOfString: ").Append(ArrayOfString).Append("\n");
             sb.Append("  ArrayArrayOfInteger: ").Append(ArrayArrayOfInteger).Append("\n");
             sb.Append("  ArrayArrayOfModel: ").Append(ArrayArrayOfModel).Append("\n");
@@ -124,6 +133,10 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.NullableArrayOfString != null)
+                {
+                    hashCode = (hashCode * 59) + this.NullableArrayOfString.GetHashCode();
+                }
                 if (this.ArrayOfString != null)
                 {
                     hashCode = (hashCode * 59) + this.ArrayOfString.GetHashCode();

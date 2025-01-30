@@ -1237,7 +1237,7 @@ void (empty response body)
 
 <a id="testenumparameters"></a>
 # **TestEnumParameters**
-> void TestEnumParameters (List<string>? enumHeaderStringArray = null, string? enumHeaderString = null, List<string>? enumQueryStringArray = null, string? enumQueryString = null, int? enumQueryInteger = null, double? enumQueryDouble = null, List<string>? enumFormStringArray = null, string? enumFormString = null)
+> void TestEnumParameters (List<string> enumHeaderStringArray = null, string? enumHeaderString = null, List<string> enumQueryStringArray = null, string? enumQueryString = null, int? enumQueryInteger = null, double? enumQueryDouble = null, List<string> enumFormStringArray = null, string? enumFormString = null)
 
 To test enum parameters
 
@@ -1264,13 +1264,13 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FakeApi(httpClient, config, httpClientHandler);
-            var enumHeaderStringArray = new List<string>?(); // List<string>? | Header parameter enum test (string array) (optional) 
+            var enumHeaderStringArray = new List<string>(); // List<string> | Header parameter enum test (string array) (optional) 
             var enumHeaderString = "_abc";  // string? | Header parameter enum test (string) (optional)  (default to -efg)
-            var enumQueryStringArray = new List<string>?(); // List<string>? | Query parameter enum test (string array) (optional) 
+            var enumQueryStringArray = new List<string>(); // List<string> | Query parameter enum test (string array) (optional) 
             var enumQueryString = "_abc";  // string? | Query parameter enum test (string) (optional)  (default to -efg)
             var enumQueryInteger = 1;  // int? | Query parameter enum test (double) (optional) 
             var enumQueryDouble = 1.1D;  // double? | Query parameter enum test (double) (optional) 
-            var enumFormStringArray = new List<string>?(); // List<string>? | Form parameter enum test (string array) (optional)  (default to $)
+            var enumFormStringArray = new List<string>(); // List<string> | Form parameter enum test (string array) (optional)  (default to $)
             var enumFormString = "_abc";  // string? | Form parameter enum test (string) (optional)  (default to -efg)
 
             try
@@ -1310,13 +1310,13 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **enumHeaderStringArray** | [**List&lt;string&gt;?**](string.md) | Header parameter enum test (string array) | [optional]  |
+| **enumHeaderStringArray** | [**List&lt;string&gt;**](string.md) | Header parameter enum test (string array) | [optional]  |
 | **enumHeaderString** | **string?** | Header parameter enum test (string) | [optional] [default to -efg] |
-| **enumQueryStringArray** | [**List&lt;string&gt;?**](string.md) | Query parameter enum test (string array) | [optional]  |
+| **enumQueryStringArray** | [**List&lt;string&gt;**](string.md) | Query parameter enum test (string array) | [optional]  |
 | **enumQueryString** | **string?** | Query parameter enum test (string) | [optional] [default to -efg] |
 | **enumQueryInteger** | **int?** | Query parameter enum test (double) | [optional]  |
 | **enumQueryDouble** | **double?** | Query parameter enum test (double) | [optional]  |
-| **enumFormStringArray** | [**List&lt;string&gt;?**](string.md) | Form parameter enum test (string array) | [optional] [default to $] |
+| **enumFormStringArray** | [**List&lt;string&gt;**](string.md) | Form parameter enum test (string array) | [optional] [default to $] |
 | **enumFormString** | **string?** | Form parameter enum test (string) | [optional] [default to -efg] |
 
 ### Return type

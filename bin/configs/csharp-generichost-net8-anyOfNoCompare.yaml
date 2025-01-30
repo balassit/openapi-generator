@@ -9,6 +9,7 @@ additionalProperties:
   useCompareNetObjects: false
   disallowAdditionalPropertiesIfNotPresent: false
   nullableReferenceTypes: true
+  nullableCollectionTypes: true
   equatable: true
   targetFramework: net8.0
   modelPropertySorting: alphabetical

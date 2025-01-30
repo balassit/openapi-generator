@@ -216,6 +216,10 @@ public class CSharpReducedClientCodegen extends AbstractCSharpCodegen {
                 CodegenConstants.NULLABLE_REFERENCE_TYPES_DESC,
                 this.nullReferenceTypesFlag);
 
+        addSwitch(CodegenConstants.NULLABLE_COLLECTION_TYPES,
+                CodegenConstants.NULLABLE_COLLECTION_TYPES_DESC,
+                this.nullCollectionTypesFlag);
+
         addSwitch(CodegenConstants.HIDE_GENERATION_TIMESTAMP,
                 CodegenConstants.HIDE_GENERATION_TIMESTAMP_DESC,
                 this.hideGenerationTimestamp);
@@ -508,7 +512,9 @@ public class CSharpReducedClientCodegen extends AbstractCSharpCodegen {
         super.postProcessParameter(parameter);
         postProcessEmitDefaultValue(parameter.vendorExtensions);
 
-        if (!parameter.dataType.endsWith("?") && !parameter.required && (nullReferenceTypesFlag || this.getNullableTypes().contains(parameter.dataType))) {
+        if (!parameter.dataType.endsWith("?") 
+            && !parameter.required 
+            && (getNullableTypes().contains(parameter.dataType) || (nullReferenceTypesFlag && (nullCollectionTypesFlag || (!parameter.isArray && !parameter.isMap))))) {
             parameter.dataType = parameter.dataType + "?";
         }
     }

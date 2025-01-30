@@ -319,7 +319,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormStringArray">Form parameter enum test (string array) (optional, default to $)</param>
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <returns></returns>
-        void TestEnumParameters(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?));
+        void TestEnumParameters(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?));
 
         /// <summary>
         /// To test enum parameters
@@ -337,7 +337,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormStringArray">Form parameter enum test (string array) (optional, default to $)</param>
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TestEnumParametersWithHttpInfo(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?));
+        ApiResponse<Object> TestEnumParametersWithHttpInfo(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?));
         /// <summary>
         /// Fake endpoint to test group parameters (optional)
         /// </summary>
@@ -827,7 +827,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TestEnumParametersAsync(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task TestEnumParametersAsync(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// To test enum parameters
@@ -846,7 +846,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TestEnumParametersWithHttpInfoAsync(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> TestEnumParametersWithHttpInfoAsync(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Fake endpoint to test group parameters (optional)
         /// </summary>
@@ -2898,7 +2898,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormStringArray">Form parameter enum test (string array) (optional, default to $)</param>
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <returns></returns>
-        public void TestEnumParameters(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?))
+        public void TestEnumParameters(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?))
         {
             TestEnumParametersWithHttpInfo(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString);
         }
@@ -2916,7 +2916,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormStringArray">Form parameter enum test (string array) (optional, default to $)</param>
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Object> TestEnumParametersWithHttpInfo(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?))
+        public Org.OpenAPITools.Client.ApiResponse<Object> TestEnumParametersWithHttpInfo(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?))
         {
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
 
@@ -2994,7 +2994,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TestEnumParametersAsync(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task TestEnumParametersAsync(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             var task = TestEnumParametersWithHttpInfoAsync(enumHeaderStringArray, enumHeaderString, enumQueryStringArray, enumQueryString, enumQueryInteger, enumQueryDouble, enumFormStringArray, enumFormString, cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
@@ -3018,7 +3018,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="enumFormString">Form parameter enum test (string) (optional, default to -efg)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> TestEnumParametersWithHttpInfoAsync(List<string>? enumHeaderStringArray = default(List<string>?), string? enumHeaderString = default(string?), List<string>? enumQueryStringArray = default(List<string>?), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string>? enumFormStringArray = default(List<string>?), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Object>> TestEnumParametersWithHttpInfoAsync(List<string> enumHeaderStringArray = default(List<string>), string? enumHeaderString = default(string?), List<string> enumQueryStringArray = default(List<string>), string? enumQueryString = default(string?), int? enumQueryInteger = default(int?), double? enumQueryDouble = default(double?), List<string> enumFormStringArray = default(List<string>), string? enumFormString = default(string?), System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();

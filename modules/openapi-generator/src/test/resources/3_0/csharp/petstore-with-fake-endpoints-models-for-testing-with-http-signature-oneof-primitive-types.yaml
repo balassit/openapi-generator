@@ -1926,6 +1926,11 @@ components:
     ArrayTest:
       type: object
       properties:
+        nullable_array_of_string:
+          type: array
+          nullable: true
+          items:
+            type: string
         array_of_string:
           type: array
           items:

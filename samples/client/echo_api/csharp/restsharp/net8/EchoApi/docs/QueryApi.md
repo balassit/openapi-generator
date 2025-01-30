@@ -482,7 +482,7 @@ No authorization required
 
 <a id="testquerystyleformexplodefalsearrayinteger"></a>
 # **TestQueryStyleFormExplodeFalseArrayInteger**
-> string TestQueryStyleFormExplodeFalseArrayInteger (List<int>? queryObject = null)
+> string TestQueryStyleFormExplodeFalseArrayInteger (List<int> queryObject = null)
 
 Test query parameter(s)
 
@@ -505,7 +505,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:3000";
             var apiInstance = new QueryApi(config);
-            var queryObject = new List<int>?(); // List<int>? |  (optional) 
+            var queryObject = new List<int>(); // List<int> |  (optional) 
 
             try
             {
@@ -548,7 +548,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **queryObject** | [**List&lt;int&gt;?**](int.md) |  | [optional]  |
+| **queryObject** | [**List&lt;int&gt;**](int.md) |  | [optional]  |
 
 ### Return type
 
@@ -573,7 +573,7 @@ No authorization required
 
 <a id="testquerystyleformexplodefalsearraystring"></a>
 # **TestQueryStyleFormExplodeFalseArrayString**
-> string TestQueryStyleFormExplodeFalseArrayString (List<string>? queryObject = null)
+> string TestQueryStyleFormExplodeFalseArrayString (List<string> queryObject = null)
 
 Test query parameter(s)
 
@@ -596,7 +596,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:3000";
             var apiInstance = new QueryApi(config);
-            var queryObject = new List<string>?(); // List<string>? |  (optional) 
+            var queryObject = new List<string>(); // List<string> |  (optional) 
 
             try
             {
@@ -639,7 +639,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **queryObject** | [**List&lt;string&gt;?**](string.md) |  | [optional]  |
+| **queryObject** | [**List&lt;string&gt;**](string.md) |  | [optional]  |
 
 ### Return type
 

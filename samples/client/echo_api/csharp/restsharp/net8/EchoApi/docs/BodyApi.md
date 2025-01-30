@@ -467,7 +467,7 @@ No authorization required
 
 <a id="testechobodyfreeformobjectresponsestring"></a>
 # **TestEchoBodyFreeFormObjectResponseString**
-> string TestEchoBodyFreeFormObjectResponseString (Object? body = null)
+> string TestEchoBodyFreeFormObjectResponseString (Object body = null)
 
 Test free form object
 
@@ -490,7 +490,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:3000";
             var apiInstance = new BodyApi(config);
-            var body = null;  // Object? | Free form object (optional) 
+            var body = null;  // Object | Free form object (optional) 
 
             try
             {
@@ -533,7 +533,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **body** | **Object?** | Free form object | [optional]  |
+| **body** | **Object** | Free form object | [optional]  |
 
 ### Return type
 

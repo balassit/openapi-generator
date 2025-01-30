@@ -10,7 +10,7 @@ public class {{classname}} {{#parent}}: {{{.}}}{{/parent}}
     public {{{datatypeWithEnum}}}{{#isNullable}}?{{/isNullable}} {{name}} { get; set; }{{#defaultValue}} = {{{.}}};{{/defaultValue}}
 {{/isEnum}}
 {{^isEnum}}
-public {{{dataType}}}{{#nullableReferenceTypes}}{{^isContainer}}{{^required}}{{^isNullable}}?{{/isNullable}}{{/required}}{{/isContainer}}{{/nullableReferenceTypes}} {{name}} { get; set; }{{#defaultValue}} = {{{.}}};{{/defaultValue}}
+public {{{dataType}}}{{#nullableReferenceTypes}}{{^required}}{{^isNullable}}?{{/isNullable}}{{/required}}{{/nullableReferenceTypes}} {{name}} { get; set; }{{#defaultValue}} = {{{.}}};{{/defaultValue}}
 {{/isEnum}}
 {{/vars}}
 }

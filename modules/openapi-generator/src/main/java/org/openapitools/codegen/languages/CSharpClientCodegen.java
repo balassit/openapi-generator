@@ -279,6 +279,10 @@ public class CSharpClientCodegen extends AbstractCSharpCodegen {
                 CodegenConstants.NULLABLE_REFERENCE_TYPES_DESC + " Starting in .NET 6.0 the default is true.",
                 this.nullReferenceTypesFlag);
 
+        addSwitch(CodegenConstants.NULLABLE_COLLECTION_TYPES,
+                CodegenConstants.NULLABLE_COLLECTION_TYPES_DESC,
+                this.nullCollectionTypesFlag);
+
         addSwitch(CodegenConstants.HIDE_GENERATION_TIMESTAMP,
                 CodegenConstants.HIDE_GENERATION_TIMESTAMP_DESC,
                 this.hideGenerationTimestamp);
@@ -677,7 +681,10 @@ public class CSharpClientCodegen extends AbstractCSharpCodegen {
         super.postProcessParameter(parameter);
         postProcessEmitDefaultValue(parameter.vendorExtensions);
 
-        if (!GENERICHOST.equals(getLibrary()) && !parameter.dataType.endsWith("?") && !parameter.required && (nullReferenceTypesFlag || this.getNullableTypes().contains(parameter.dataType))) {
+        if (!GENERICHOST.equals(getLibrary()) 
+            && !parameter.dataType.endsWith("?") 
+            && !parameter.required 
+            && (getNullableTypes().contains(parameter.dataType) || (nullReferenceTypesFlag && (nullCollectionTypesFlag || (!parameter.isArray && !parameter.isMap))))) {
             parameter.dataType = parameter.dataType + "?";
         }
     }
