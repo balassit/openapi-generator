@@ -38,5 +38,11 @@ namespace Org.OpenAPITools.Models
         [DataMember(Name="nullableName", EmitDefaultValue=true)]
         public string NullableName { get; set; }
 
+        /// <summary>
+        /// Gets or Sets NullableList
+        /// </summary>
+        [DataMember(Name="nullableList", EmitDefaultValue=true)]
+        public List<string> NullableList { get; set; }
+
     }
 }

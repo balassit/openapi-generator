@@ -39,6 +39,12 @@ namespace Org.OpenAPITools.Models
         public string? NullableName { get; set; }
 
         /// <summary>
+        /// Gets or Sets NullableList
+        /// </summary>
+        [DataMember(Name="nullableList", EmitDefaultValue=true)]
+        public List<string> NullableList { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -48,6 +54,7 @@ namespace Org.OpenAPITools.Models
             sb.Append("class TestNullable {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  NullableName: ").Append(NullableName).Append("\n");
+            sb.Append("  NullableList: ").Append(NullableList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,6 +100,12 @@ namespace Org.OpenAPITools.Models
                     NullableName == other.NullableName ||
                     NullableName != null &&
                     NullableName.Equals(other.NullableName)
+                ) && 
+                (
+                    NullableList == other.NullableList ||
+                    NullableList != null &&
+                    other.NullableList != null &&
+                    NullableList.SequenceEqual(other.NullableList)
                 );
         }
 
@@ -110,6 +123,8 @@ namespace Org.OpenAPITools.Models
                     hashCode = hashCode * 59 + Name.GetHashCode();
                     if (NullableName != null)
                     hashCode = hashCode * 59 + NullableName.GetHashCode();
+                    if (NullableList != null)
+                    hashCode = hashCode * 59 + NullableList.GetHashCode();
                 return hashCode;
             }
         }

@@ -875,6 +875,7 @@
       "TestNullable" : {
         "example" : {
           "nullableName" : "nullableName",
+          "nullableList" : [ "nullableList", "nullableList" ],
           "name" : "name"
         },
         "properties" : {
@@ -884,6 +885,13 @@
           "nullableName" : {
             "nullable" : true,
             "type" : "string"
+          },
+          "nullableList" : {
+            "items" : {
+              "type" : "string"
+            },
+            "nullable" : true,
+            "type" : "array"
           }
         },
         "type" : "object"

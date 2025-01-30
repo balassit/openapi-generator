@@ -659,6 +659,11 @@ components:
         nullableName:
           type: string
           nullable: true
+        nullableList:
+          type: array
+          items:
+            type: string
+          nullable: true
     Order:
       title: Pet Order
       description: An order for a pets from the pet store
